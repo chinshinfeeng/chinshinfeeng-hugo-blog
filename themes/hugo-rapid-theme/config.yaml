@@ -1,0 +1,54 @@
+title: "chinshinfeeng Blog"
+languageCode: "zh-CN"
+baseurl: "http://www.chinshinfeeng.org"
+theme: "hugo-rapid-theme"
+copyright: "Copyright (c) 2015. All rights reserved."
+MetaDataFormat: "yaml"
+canonifyurls: true
+builddrafts: false
+PaginatePath: paginator
+pygmentsStyle: "default"
+pygmentsUseClasses: true
+RSSUri: "feed.xml"
+disablePathToLower: true 
+hasCJKLanguage: true
+permalinks:
+  posts: /:year/:month/:day/:slug/
+Taxonomies:
+  tag: "tags"
+  category: "categories"
+params:
+  CopyrightHTML: "Copyright &#xA9; 2015. All Rights Reserved."
+  GitHubUser: "chinshinfeeng"
+  SidebarRecentLimit: 5
+  DateForm : "2016年10月22日"
+  Tagline: "tag"
+  Description: "学习总结思考，不忘初心"
+  Keywords: "独立博客,读书总结,技术分享"
+  Categories:
+    - "读书总结"
+    - "技术文章"
+    - "思考感悟"
+menu:
+  main:
+      - Name: "归档"
+        Pre: "<i class='fa fa-heart'></i>"
+        Weight: -110
+        Identifier: "post"
+        URL: "/post/"
+      - Name: "关于我"
+        Pre: "<i class='fa fa-road'></i>"
+        Identifier: "about"
+        Weight: -100
+        URL: "/about/"
+author:
+  name: "chinshinfeeng"
+
+images:
+  - 480x
+  - 768x
+  - 960x
+  - 1024x
+  - 1920x
+  - 720x340
+  - 520x245
