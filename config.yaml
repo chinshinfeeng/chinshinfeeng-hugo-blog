@@ -22,7 +22,7 @@ params:
   GitHubUser: "chinshinfeeng"
   SidebarRecentLimit: 5
   DateForm : "2016年10月22日"
-  Tagline: "tag"
+  Tagline: ""
   Description: "学习总结思考，不忘初心"
   Keywords: "独立博客,读书总结,技术分享"
   Categories:
