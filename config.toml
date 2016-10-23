@@ -1,0 +1,23 @@
+theme="polymer"
+baseurl = "blog.chinshinfeeng.org"
+languageCode = "zh-cn"
+title = "chinshinfeeng的博客"
+MetaDataFormat = "toml"
+paginate = 10 # optional
+disqusShortname = "Your Disqus Name" # optional
+copyright = "© 2016 Copyright chinshinfeeng"
+
+[params]
+  author = "chinshinfeeng"
+  photo = "images/chinshinfeeng.png" # optional
+  profile = "images/profile.png" # optional
+  cover = "images/cover.png" # optional
+  twitter = "chinshinfeeng" # optional
+  github = "chinshinfeeng" # optional
+  facebook = "Your facebook Name" # optional
+  gplus = "Your Google+ Name" # optional
+  linkedin = "Your linkedin Name" # optional
+  googleAnalyticsUserID = "Your Analytics User Id" # optional
+
+[permalinks]
+  post = "/:year/:month/:day/:filename/" # optional

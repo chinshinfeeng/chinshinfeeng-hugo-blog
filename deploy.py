@@ -10,9 +10,9 @@ import argparse
 import subprocess
 
 __author__ = 'chinshinfeeng'
-cname='www.chinshinfeeng.org'
+cname='blog.chinshinfeeng.org'
 GIT_REPO = [
-    ['origin',  'gh-pages', 'git@github.com:chinshinfeeng/chinshinfeeng-blog-deployed.git']
+    ['origin',  'gh-pages', 'git@github.com:chinshinfeeng/chinshinfeeng-blog-polymer.git']
 ]
 
 DEPLOY_DIR = 'gh-pages'
