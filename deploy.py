@@ -9,8 +9,8 @@ import shutil
 import argparse
 import subprocess
 
-__author__ = 'coderzh'
-
+__author__ = 'chinshinfeeng'
+cname='www.chinshinfeeng.org'
 GIT_REPO = [
     ['origin',  'gh-pages', 'git@github.com:chinshinfeeng/chinshinfeeng-blog-deployed.git']
 ]
@@ -107,6 +107,7 @@ def deploy(args):
 
         # step7 commit and push
         if len(GIT_REPO) > 0:
+            subprocess.call('echo "{0}" > CNAME'.format(cname), shell=True)
             subprocess.call('git add --all', shell=True)
             subprocess.call('git commit -a -m "{0}"'.format(commit_msg), shell=True)
             for repo in GIT_REPO:
