@@ -16,6 +16,6 @@ min_version = 0.14
 
 # If porting an existing theme
 [original]
-  name = ""
-  homepage = ""
+  name = "rapid"
+  homepage = "http://blog.coderzh.com/"
   repo = ""
