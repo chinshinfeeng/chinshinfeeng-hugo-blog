@@ -18,6 +18,6 @@ url_date_format=`date '+%Y/%m/%d'`
 url="/${url_date_format}/${post_name}"
 
 sed -i "" "s#title:.*#title: ${post_name}#" content/${post_path}
-sed -i "" "s#url: \"\"#url: \"${post_name}\"#" content/${post_path}
+sed -i "" "s#url: \"\"#url: \"${url}\"#" content/${post_path}
 
 vim content/${post_path}
