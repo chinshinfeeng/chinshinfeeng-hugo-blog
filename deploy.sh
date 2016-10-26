@@ -12,10 +12,12 @@ branch="gh-pages"
 if [ "$theme" = "polymer" ];then
     repo="chinshinfeeng-blog-polymer"
     cname="blog.chinshinfeeng.org"
+    rm config.*
     cp themes/$theme/config.toml .
 elif [ "$theme" = "rapid" ];then
     repo="chinshinfeeng-blog-deployed"
     cname="www.chinshinfeeng.org"
+    rm config.*
     cp themes/$theme/config.yaml .
 else
     echo "$theme not exit"
@@ -70,4 +72,5 @@ echo "======msg is: $commit_msg======"
 git commit -m "$commit_msg" 
 git push origin $branch:$branch -u
 
-rm $current_dir/config.*
+#rm $current_dir/config.*
+git reset
