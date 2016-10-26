@@ -1,5 +1,5 @@
 theme="polymer"
-baseurl = "blog.chinshinfeeng.org"
+baseurl = "http://blog.chinshinfeeng.org"
 languageCode = "zh-cn"
 title = "chinshinfeeng的博客"
 MetaDataFormat = "toml"

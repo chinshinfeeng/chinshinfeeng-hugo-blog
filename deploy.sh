@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set +x
 if [ $# != 1 ];then
    echo "Usage: auto/manual/first"
    exit
@@ -20,7 +20,7 @@ mkdir -p $dest_dir
 cd $current_dir
 
 ## hugo 
-hugo
+hugo -v --cacheDir="./cache"
 
 commit_msg=`git log -1 --pretty=format:"%s"`
 cp -r public/ $dest_dir
@@ -30,13 +30,19 @@ ls
 case $choice in
     first)
        git init
-       echo $cname > CNAME
-       git add -A
-       git commit -m "$commit_msg" 
        git remote add origin $git_prefix$repo.git
-       git push -u origin master
+       git fetch origin
+       git checkout --orphan tmp
+       git rm --cached -r .
+       git clean -fdx
+       git branch -D $branch
+       git checkout -b $branch
        ;;
     auto)
+       git init
+       git remote add origin $git_prefix$repo.git
+       git fetch origin
+       git checkout $branch
        ;;
     manual)
        ;;
@@ -46,4 +52,9 @@ case $choice in
        ;;
 esac
 
-#git push origin $branch:$branch
+cp -r $current_dir/public/ $dest_dir
+
+echo $cname > CNAME
+git add -A
+git commit -m "$commit_msg" 
+git push origin $branch:$branch -u
