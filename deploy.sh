@@ -66,5 +66,8 @@ cp -r $current_dir/public/ $dest_dir
 
 echo $cname > CNAME
 git add -A
+echo "======msg is: $commit_msg======"
 git commit -m "$commit_msg" 
 git push origin $branch:$branch -u
+
+rm $current_dir/config.*
