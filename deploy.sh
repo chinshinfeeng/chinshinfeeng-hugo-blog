@@ -1,16 +1,26 @@
 #!/bin/sh
 set +x
-if [ $# != 1 ];then
-   echo "Usage: auto/manual/first"
+if [ $# != 2 ];then
+   echo "Usage: auto/manual/first theme"
    exit
 fi
 choice="$1"
+theme="$2"
 
 git_prefix="git@github.com:chinshinfeeng/"
 branch="gh-pages"
-repo="chinshinfeeng-blog-polymer"
-cname="blog.chinshinfeeng.org"
-
+if [ "$theme" = "polymer" ];then
+    repo="chinshinfeeng-blog-polymer"
+    cname="blog.chinshinfeeng.org"
+    cp themes/$theme/config.toml .
+elif [ "$theme" = "rapid" ];then
+    repo="chinshinfeeng-blog-deployed"
+    cname="www.chinshinfeeng.org"
+    cp themes/$theme/config.yaml .
+else
+    echo "$theme not exit"
+    exit
+fi
 date_format=`date '+%Y-%m-%d'`
 current_dir=`pwd`
 dest_dir=`cd .. && pwd`"/${date_format}tmp"
